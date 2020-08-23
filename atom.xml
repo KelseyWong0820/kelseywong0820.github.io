@@ -3,23 +3,18 @@
   <title>Hexo</title>
   
   
-  <link href="https://kelseywong0820.github.io/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/atom.xml" rel="self"/>
   
-  <link href="https://kelseywong0820.github.io/"/>
+  <link href="http://yoursite.com/"/>
   <updated>2020-08-22T15:31:49.896Z</updated>
-  <id>https://kelseywong0820.github.io/</id>
-  
-  <author>
-    <name>Kelsey Wong</name>
-    
-  </author>
+  <id>http://yoursite.com/</id>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
     <title>article title</title>
-    <link href="https://kelseywong0820.github.io/2020/08/22/article-title/"/>
-    <id>https://kelseywong0820.github.io/2020/08/22/article-title/</id>
+    <link href="http://yoursite.com/2020/08/22/article-title/"/>
+    <id>http://yoursite.com/2020/08/22/article-title/</id>
     <published>2020-08-22T15:31:49.000Z</published>
     <updated>2020-08-22T15:31:49.896Z</updated>
     
@@ -31,8 +26,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://kelseywong0820.github.io/2020/08/19/hello-world/"/>
-    <id>https://kelseywong0820.github.io/2020/08/19/hello-world/</id>
+    <link href="http://yoursite.com/2020/08/19/hello-world/"/>
+    <id>http://yoursite.com/2020/08/19/hello-world/</id>
     <published>2020-08-19T11:57:39.917Z</published>
     <updated>2020-08-19T11:57:39.917Z</updated>
     
