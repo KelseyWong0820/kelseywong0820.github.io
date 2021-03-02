@@ -20,14 +20,23 @@
     var CONFIG = {"hostname":"kelseywong0820.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","Pisces | Gemini":240,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Kelsey&#39;s blog">
-<meta property="og:url" content="https://kelseywong0820.github.io/archives/2020/08/index.html">
+  <meta name="description" content="上一篇内容写到用$create-react-app my-app搭建脚手架，然后随着node的更新这种方法官方不再支持，出现以下情况 笔者的npm版本：因此按照提示操作，进行脚手架的搭建（否则后面还有数不完的坑…..这也是为什么会有踩坑记2的由来，当时降低版本搭建结果并不能启动）打开官方文档地址：https:&#x2F;&#x2F;create-react-app.dev&#x2F;docs&#x2F;getting-started&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【React】脚手架踩坑记（2）">
+<meta property="og:url" content="https://kelseywong0820.github.io/2021/03/02/%E3%80%90React%E3%80%91%E8%84%9A%E6%89%8B%E6%9E%B6%E8%B8%A9%E5%9D%91%E8%AE%B0%EF%BC%882%EF%BC%89-1/index.html">
 <meta property="og:site_name" content="Kelsey&#39;s blog">
+<meta property="og:description" content="上一篇内容写到用$create-react-app my-app搭建脚手架，然后随着node的更新这种方法官方不再支持，出现以下情况 笔者的npm版本：因此按照提示操作，进行脚手架的搭建（否则后面还有数不完的坑…..这也是为什么会有踩坑记2的由来，当时降低版本搭建结果并不能启动）打开官方文档地址：https:&#x2F;&#x2F;create-react-app.dev&#x2F;docs&#x2F;getting-started&#x2F;">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020121616472149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0tSSVNuZXZlcnNuZXZlcg==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020121616483379.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201216165014700.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201216165131197.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0tSSVNuZXZlcnNuZXZlcg==,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2021-03-02T08:52:38.000Z">
+<meta property="article:modified_time" content="2021-03-02T09:11:59.588Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/2020121616472149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0tSSVNuZXZlcnNuZXZlcg==,size_16,color_FFFFFF,t_70">
 
-<link rel="canonical" href="https://kelseywong0820.github.io/archives/2020/08/">
+<link rel="canonical" href="https://kelseywong0820.github.io/2021/03/02/%E3%80%90React%E3%80%91%E8%84%9A%E6%89%8B%E6%9E%B6%E8%B8%A9%E5%9D%91%E8%AE%B0%EF%BC%882%EF%BC%89-1/">
 
 
 <script id="page-configurations">
@@ -35,12 +44,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Archive | Kelsey's blog</title>
+  <title>【React】脚手架踩坑记（2） | Kelsey's blog</title>
   
 
 
@@ -139,50 +148,81 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">Um..! 17 posts in total. Keep on posting.</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://kelseywong0820.github.io/2021/03/02/%E3%80%90React%E3%80%91%E8%84%9A%E6%89%8B%E6%9E%B6%E8%B8%A9%E5%9D%91%E8%AE%B0%EF%BC%882%EF%BC%89-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kelsey's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【React】脚手架踩坑记（2）
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-03-02 16:52:38 / Modified: 17:11:59" itemprop="dateCreated datePublished" datetime="2021-03-02T16:52:38+08:00">2021-03-02</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
+        <p>上一篇内容写到用<br>$create-react-app my-app<br>搭建脚手架，然后随着node的更新这种方法官方不再支持，出现以下情况<br><img src="https://img-blog.csdnimg.cn/2020121616472149.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0tSSVNuZXZlcnNuZXZlcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>笔者的npm版本：<br><img src="https://img-blog.csdnimg.cn/2020121616483379.png" alt="在这里插入图片描述"><br>因此按照提示操作，进行脚手架的搭建（否则后面还有数不完的坑…..这也是为什么会有踩坑记2的由来，当时降低版本搭建结果并不能启动）<br><img src="https://img-blog.csdnimg.cn/20201216165014700.png" alt="在这里插入图片描述"><br>打开官方文档地址：<a target="_blank" rel="noopener" href="https://create-react-app.dev/docs/getting-started/">https://create-react-app.dev/docs/getting-started/</a><br><img src="https://img-blog.csdnimg.cn/20201216165131197.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0tSSVNuZXZlcnNuZXZlcg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-08-19T19:57:39+08:00"
-              content="2020-08-19">
-          08-19
-        </time>
-      </div>
+      <footer class="post-footer">
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/08/19/hello-world/" itemprop="url">
-            <span itemprop="name">Hello World</span>
-          </a>
-      </div>
+        
 
-    </header>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/03/02/111.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%B0%8F%E6%B7%B1%E5%BA%A6/" rel="prev" title="111. 二叉树的最小深度">
+      <i class="fa fa-chevron-left"></i> 111. 二叉树的最小深度
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/03/02/101-%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="next" title="101.对称二叉树">
+      101.对称二叉树 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
   </article>
-
-
-    </div>
-  </div>
   
   
-  
-
   
 
 
